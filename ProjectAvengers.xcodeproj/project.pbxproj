@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		D4BEB68B1B6E9937006AECCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB68A1B6E9937006AECCD /* main.m */; };
 		D4BEB68E1B6E9937006AECCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB68D1B6E9937006AECCD /* AppDelegate.m */; };
-		D4BEB6911B6E9937006AECCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB6901B6E9937006AECCD /* ViewController.m */; };
 		D4BEB6941B6E9937006AECCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4BEB6921B6E9937006AECCD /* Main.storyboard */; };
 		D4BEB6961B6E9937006AECCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4BEB6951B6E9937006AECCD /* Images.xcassets */; };
 		D4BEB6991B6E9937006AECCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4BEB6971B6E9937006AECCD /* LaunchScreen.xib */; };
 		D4BEB6A51B6E9937006AECCD /* ProjectAvengersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB6A41B6E9937006AECCD /* ProjectAvengersTests.m */; };
+		D4BEB6B01B6EB5E0006AECCD /* AvengerData.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB6AF1B6EB5E0006AECCD /* AvengerData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		D4BEB68A1B6E9937006AECCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4BEB68C1B6E9937006AECCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4BEB68D1B6E9937006AECCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D4BEB68F1B6E9937006AECCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D4BEB6901B6E9937006AECCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D4BEB6931B6E9937006AECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4BEB6951B6E9937006AECCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D4BEB6981B6E9937006AECCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D4BEB69E1B6E9937006AECCD /* ProjectAvengersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectAvengersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BEB6A31B6E9937006AECCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BEB6A41B6E9937006AECCD /* ProjectAvengersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectAvengersTests.m; sourceTree = "<group>"; };
+		D4BEB6AE1B6EB5E0006AECCD /* AvengerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvengerData.h; sourceTree = "<group>"; };
+		D4BEB6AF1B6EB5E0006AECCD /* AvengerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvengerData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 			children = (
 				D4BEB68C1B6E9937006AECCD /* AppDelegate.h */,
 				D4BEB68D1B6E9937006AECCD /* AppDelegate.m */,
-				D4BEB68F1B6E9937006AECCD /* ViewController.h */,
-				D4BEB6901B6E9937006AECCD /* ViewController.m */,
+				D4BEB6AE1B6EB5E0006AECCD /* AvengerData.h */,
+				D4BEB6AF1B6EB5E0006AECCD /* AvengerData.m */,
 				D4BEB6921B6E9937006AECCD /* Main.storyboard */,
 				D4BEB6951B6E9937006AECCD /* Images.xcassets */,
 				D4BEB6971B6E9937006AECCD /* LaunchScreen.xib */,
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BEB6911B6E9937006AECCD /* ViewController.m in Sources */,
 				D4BEB68E1B6E9937006AECCD /* AppDelegate.m in Sources */,
+				D4BEB6B01B6EB5E0006AECCD /* AvengerData.m in Sources */,
 				D4BEB68B1B6E9937006AECCD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
