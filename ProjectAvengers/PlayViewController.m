@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSArray *questions;
 @property (nonatomic) NSArray *options;
+@property (nonatomic) NSString *selectedQuestion;
 
 @end
 
@@ -20,13 +21,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.questions = [[NSArray alloc] init];
-    self.options = [[NSArray alloc] init];
     
-    NSArray *allQuestions = [Avengers.heroQuestions allKeys];
-    NSString *selectedQuestion = allQuestions[section];
-    NSArray *allOptions = Avengers.heroQuestions[selectedQuestion];
+    self.questions = [Avengers.heroQuestions allKeys];
+    self.selectedQuestion = questions[section];
+    self.options = Avengers.heroQuestions[selectedQuestion];
     
+    
+}
+
+- (void)nextQuestion {
     
 }
 
