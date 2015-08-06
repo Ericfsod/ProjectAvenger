@@ -14,6 +14,7 @@
 @property (nonatomic) NSArray *questions;
 @property (nonatomic) NSArray *options;
 @property (nonatomic) NSString *selectedQuestion;
+@property (nonatomic) NSMutableArray *resultData;
 - (void)nextQuestion;
 
 @end
@@ -23,9 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.questions = [Avengers.heroQuestions allKeys];
-    [nextQuestion];
-
-    
+    [self nextQuestion];
+    NSMutableArray *resultData = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < self.questions.count; i++) {
+        [self storeResult]
+    }
     
 }
 
@@ -47,6 +50,28 @@
     self.optionD.text = self.options[3];
     self.optionE.text = self.options[4];
     self.optionF.text = self.options[5];
+}
+
+-(void)storeResult: (NSString *)resultSelected {
+    [self.resultData addObject:resultSelected];
+}
+
+- (IBAction)selected:(id)sender {
+    NSString *userSelected;
+    if (self.buttonA == sender) {
+        userSelected= self.optionA.text;
+    } else if (self.buttonB == sender){
+        userSelected= self.optionB.text;
+    } else if (self.buttonC == sender){
+        userSelected= self.optionC.text;
+    } else if (self.buttonD == sender){
+        userSelected= self.optionD.text;
+    } else if (self.buttonE == sender){
+        userSelected= self.optionE.text;
+    } else if (self.buttonF == sender){
+        userSelected= self.optionF.text;
+    }
+    [self storeResult:userSelected];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -41,7 +41,7 @@
 
 + (NSDictionary *)heroQuestions {
     return @ {
-        @"1) What matters to you the most in the following?" : @[
+        @"What matters to you the most in the following?" : @[
                                                                  @"Creativity",
                                                                  @"Loyalty",
                                                                  @"Normalcy",
@@ -50,7 +50,7 @@
                                                                  @"Social Status"
                                                                  
                                                                  ],
-        @"2) If you’re in a war, what would be your reason to fight." : @[
+        @"If you’re in a war, what would be your reason to fight." : @[
                                                                           @"Fame",
                                                                           @"Honor",
                                                                           @"Peace",
@@ -59,7 +59,7 @@
                                                                           @"Approval"
                                                                           
                                                                           ],
-        @"3) Which of the following food would you prefer?" : @[
+        @"Which of the following food would you prefer?" : @[
                                              @"Escargo",
                                              @"Apple Pie",
                                              @"Burrito",
@@ -67,7 +67,7 @@
                                              @"Pirogi",
                                              @"Smoked Turkey Leg"
                                              ],
-        @"4) Which of the following person would you like to hangout with?" : @[
+        @"Which of the following person would you like to hangout with?" : @[
                                                                                        @"Elon Musk",
                                                                                        @"Buzz Lightyear of Space Command",
                                                                                        @"No One",
@@ -75,7 +75,7 @@
                                                                                        @"James Bond",
                                                                                        @"Gandalf"
                                                                                        ],
-        @"5) Favorite color" : @[
+        @"Favorite color" : @[
                                  @"White",
                                  @"Blue",
                                  @"Gray",
@@ -83,7 +83,7 @@
                                  @"Red",
                                  @"Gold"
                                  ],
-        @"6) Preferred way of transportation?" : @[
+        @"Preferred way of transportation?" : @[
                                                    @"Private Jet",
                                                    @"Bike",
                                                    @"Walk/On Foot",
@@ -91,7 +91,7 @@
                                                    @"Submarine",
                                                    @"JetPack"
                                                    ],
-        @"7) Prefered Communication Device?" : @[
+        @"Prefered Communication Device?" : @[
                                                  @"Nexus 6",
                                                  @"Iphone 6 Plus",
                                                  @"Nokia 3310",
