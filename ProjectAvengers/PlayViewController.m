@@ -14,6 +14,7 @@
 @property (nonatomic) NSArray *questions;
 @property (nonatomic) NSArray *options;
 @property (nonatomic) NSString *selectedQuestion;
+- (void)nextQuestion;
 
 @end
 
@@ -21,16 +22,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.questions = [Avengers.heroQuestions allKeys];
-    self.selectedQuestion = questions[section];
-    self.options = Avengers.heroQuestions[selectedQuestion];
+    [nextQuestion];
+
     
     
 }
 
 - (void)nextQuestion {
     
+    self.selectedQuestion = self.questions[0];
+    
+    self.options = Avengers.heroQuestions[self.selectedQuestion];
+    
+//    NSDictionary *questionsDictionary = [Avengers heroQuestions];
+//    NSString *question = self.selectedQuestion;
+//    NSArray *options = [questionsDictionary objectForKey:question];
+    
+    
+    self.question.text = self.selectedQuestion;
+    self.optionA.text = self.options[0];
+    self.optionB.text = self.options[1];
+    self.optionC.text = self.options[2];
+    self.optionD.text = self.options[3];
+    self.optionE.text = self.options[4];
+    self.optionF.text = self.options[5];
 }
 
 - (void)didReceiveMemoryWarning {
