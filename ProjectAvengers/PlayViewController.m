@@ -16,6 +16,13 @@
 @property (nonatomic) NSString *selectedQuestion;
 @property (nonatomic) NSMutableArray *resultData;
 @property (nonatomic) NSInteger currentQuestion;
+@property (nonatomic) NSInteger optA;
+@property (nonatomic) NSInteger optB;
+@property (nonatomic) NSInteger optC;
+@property (nonatomic) NSInteger optD;
+@property (nonatomic) NSInteger optE;
+@property (nonatomic) NSInteger optF;
+@property (nonatomic) NSArray *resultCount;
 @property (weak, nonatomic) IBOutlet UIView *resultView;
 - (void)nextQuestion;
 
@@ -29,6 +36,12 @@
     [self.resultView setHidden:YES];
     
     self.currentQuestion = 0;
+    self.optA = 1;
+    self.optB = 1;
+    self.optC = 1;
+    self.optD = 1;
+    self.optE = 1;
+    self.optF = 1;
     
     self.questions = [Avengers.heroQuestions allKeys];
     [self nextQuestion];
@@ -52,7 +65,6 @@
     self.optionD.text = self.options[3];
     self.optionE.text = self.options[4];
     self.optionF.text = self.options[5];
-    
 }
 
 -(void)storeResult: (NSString *)resultSelected {
@@ -63,28 +75,39 @@
     NSString *userSelected;
     if (self.buttonA == sender) {
         userSelected= self.optionA.text;
+        self.optA++;
     } else if (self.buttonB == sender){
         userSelected= self.optionB.text;
+        self.optB++;
     } else if (self.buttonC == sender){
         userSelected= self.optionC.text;
+        self.optC++;
     } else if (self.buttonD == sender){
         userSelected= self.optionD.text;
+        self.optD++;
     } else if (self.buttonE == sender){
         userSelected= self.optionE.text;
+        self.optE++;
     } else if (self.buttonF == sender){
         userSelected= self.optionF.text;
+        self.optF++;
     }
     [self storeResult:userSelected];
     
     self.currentQuestion++;
     
-    
     if (self.currentQuestion == 7) {
+        
         [self resultPage];
     } else {
         [self nextQuestion];
     }
 }
+
+//- (void)resultCount {
+//    
+//    
+//}
 
 - (void)resultPage {
     [self.resultView setHidden:NO];
