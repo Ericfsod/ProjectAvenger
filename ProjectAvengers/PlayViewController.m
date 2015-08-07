@@ -104,10 +104,10 @@
     }
 }
 
-//- (void)resultCount {
-//    
-//    
-//}
+- (void) selectedHero {
+    
+    
+}
 
 - (void)resultPage {
     [self.resultView setHidden:NO];
