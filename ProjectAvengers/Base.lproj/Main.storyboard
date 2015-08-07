@@ -201,6 +201,10 @@
                                     <action selector="selected:" destination="3OP-Hx-vFY" eventType="touchUpInside" id="1Wz-3Z-Y8f"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tfx-fp-9AN" userLabel="resultView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -247,6 +251,7 @@
                         <outlet property="optionE" destination="OiJ-kg-HcR" id="yyR-MN-jEG"/>
                         <outlet property="optionF" destination="8t2-KA-CFK" id="RJE-zv-VVw"/>
                         <outlet property="question" destination="Bok-dB-dWL" id="h5Q-Ls-f4J"/>
+                        <outlet property="resultView" destination="Tfx-fp-9AN" id="xDH-uz-c3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btJ-Sx-CBi" userLabel="First Responder" sceneMemberID="firstResponder"/>

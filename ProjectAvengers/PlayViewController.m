@@ -16,6 +16,7 @@
 @property (nonatomic) NSString *selectedQuestion;
 @property (nonatomic) NSMutableArray *resultData;
 @property (nonatomic) NSInteger currentQuestion;
+@property (weak, nonatomic) IBOutlet UIView *resultView;
 - (void)nextQuestion;
 
 @end
@@ -24,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.resultView setHidden:YES];
     
     self.currentQuestion = 0;
     
@@ -75,8 +78,20 @@
     
     self.currentQuestion++;
     
-    [self nextQuestion];
+    
+    if (self.currentQuestion == 7) {
+        [self resultPage];
+    } else {
+        [self nextQuestion];
+    }
 }
+
+- (void)resultPage {
+    [self.resultView setHidden:NO];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
