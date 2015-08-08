@@ -41,8 +41,12 @@
     
     self.ironMan.name = @"iron man";
     self.hawkeye.name = @"hawkeye";
+    self.hulk.name = @"hulk";
+	self.captainAmerica.name = @"captainamerica";
+	self.blackWidow.name = @"blackwidow";
+	self.thor.name = @"thor";
+	
     
-    //
     
 }
 
