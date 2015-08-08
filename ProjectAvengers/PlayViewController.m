@@ -16,13 +16,13 @@
 @property (nonatomic) NSString *selectedQuestion;
 @property (nonatomic) NSMutableArray *resultData;
 @property (nonatomic) NSInteger currentQuestion;
-@property (nonatomic) NSInteger optA;
-@property (nonatomic) NSInteger optB;
-@property (nonatomic) NSInteger optC;
-@property (nonatomic) NSInteger optD;
-@property (nonatomic) NSInteger optE;
-@property (nonatomic) NSInteger optF;
 @property (nonatomic) NSArray *resultCount;
+@property (nonatomic) NSMutableArray *ironMan;
+@property (nonatomic) NSMutableArray *thor;
+@property (nonatomic) NSMutableArray *hulk;
+@property (nonatomic) NSMutableArray *hawkeye;
+@property (nonatomic) NSMutableArray *blackWidow;
+@property (nonatomic) NSMutableArray *captainAmerica;
 @property (weak, nonatomic) IBOutlet UIView *resultView;
 - (void)nextQuestion;
 
@@ -35,16 +35,9 @@
     
     [self.resultView setHidden:YES];
     
-    self.currentQuestion = 0;
-    self.optA = 1;
-    self.optB = 1;
-    self.optC = 1;
-    self.optD = 1;
-    self.optE = 1;
-    self.optF = 1;
-    
     self.questions = [Avengers.heroQuestions allKeys];
     [self nextQuestion];
+    
     
     
 }
@@ -58,13 +51,6 @@
 //    NSString *question = self.selectedQuestion;
 //    NSArray *options = [questionsDictionary objectForKey:question];
 
-    self.question.text = self.selectedQuestion;
-    self.optionA.text = self.options[0];
-    self.optionB.text = self.options[1];
-    self.optionC.text = self.options[2];
-    self.optionD.text = self.options[3];
-    self.optionE.text = self.options[4];
-    self.optionF.text = self.options[5];
 }
 
 -(void)storeResult: (NSString *)resultSelected {
@@ -74,23 +60,41 @@
 - (IBAction)selected:(id)sender {
     NSString *userSelected;
     if (self.buttonA == sender) {
+        
         userSelected= self.optionA.text;
-        self.optA++;
+        
+        [self.ironMan addObject:userSelected];
+        
     } else if (self.buttonB == sender){
+        
         userSelected= self.optionB.text;
-        self.optB++;
+        
+        [self.captainAmerica addObject:userSelected];
+
     } else if (self.buttonC == sender){
+        
         userSelected= self.optionC.text;
-        self.optC++;
+        
+        [self.hulk addObject:userSelected];
+
     } else if (self.buttonD == sender){
+        
         userSelected= self.optionD.text;
-        self.optD++;
+        
+        [self.hawkeye addObject:userSelected];
+
     } else if (self.buttonE == sender){
+        
         userSelected= self.optionE.text;
-        self.optE++;
+        
+        [self.blackWidow addObject:userSelected];
+
     } else if (self.buttonF == sender){
+        
         userSelected= self.optionF.text;
-        self.optF++;
+        
+        [self.thor addObject:userSelected];
+
     }
     [self storeResult:userSelected];
     
@@ -106,11 +110,25 @@
 
 - (void) selectedHero {
     
+    [self.ironMan count];
+    
+    [self.hawkeye count];
+    
+    [self.thor count];
+    
+    [self.blackWidow count];
+    
+    [self.captainAmerica count];
+    
+    [self.hulk count];
     
 }
 
 - (void)resultPage {
+    
     [self.resultView setHidden:NO];
+    
+    
     
 }
 

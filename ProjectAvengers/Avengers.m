@@ -10,34 +10,7 @@
 
 @implementation Avengers
 
-/*
-    NSArray *questions = @[
-         @{ @"question": @"What matters to you the most in the following?", @"answers" : @[] }
-    ];
- 
-    NSDictionary *displayQuestion = questions[0];
-    NSString *displayQuestionText = firstQuestion[@"question"];
-    NSArray *displayQuestionAnswers = firstQuestion[@"answers"];
- 
- 
- 
-    @[ [[Question alloc] initWithQuestion:@"" answers:@[]] ]
- 
- [Avengers heroQuestions];
- 
- Avengers *questions = [[Avengers alloc] init];
- [questions heroQuestions];
- 
- */
 
-
-
-//+ (NSArray *)heroQuestionsArray {
-//    return @[
-//             @{ @"question": @"What matters to you the most in the following?", @"answers" : @[] }
-//             @{ @"question":
-//    ];
-//}
 
 + (NSDictionary *)heroQuestions {
     return @ {
