@@ -42,6 +42,13 @@
     self.questions = [Avengers.heroQuestions allKeys];
     [self nextQuestion];
     
+    self.ironMan = [HeroModel new];
+    self.hawkeye = [HeroModel new];
+    self.hulk = [HeroModel new];
+    self.captainAmerica = [HeroModel new];
+    self.blackWidow = [HeroModel new];
+    self.thor = [HeroModel new];
+    
     self.ironMan.name = @"ironman";
     self.hawkeye.name = @"hawkeye";
     self.hulk.name = @"hulk";
@@ -62,7 +69,13 @@
 //    NSString *question = self.selectedQuestion;
 //    NSArray *options = [questionsDictionary objectForKey:question];
     
-    
+    self.question.text = self.selectedQuestion;
+    self.optionA.text = self.options[0];
+    self.optionB.text = self.options[1];
+    self.optionC.text = self.options[2];
+    self.optionD.text = self.options[3];
+    self.optionE.text = self.options[4];
+    self.optionF.text = self.options[5];
     
 }
 

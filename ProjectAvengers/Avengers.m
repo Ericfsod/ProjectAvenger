@@ -42,7 +42,7 @@
                                              ],
         @"Which of the following person would you like to hangout with?" : @[
                                                                                        @"Elon Musk",
-                                                                                       @"Buzz Lightyear of Space Command",
+                                                                                       @"Buzz Lightyear",
                                                                                        @"No One",
                                                                                        @"Spouse",
                                                                                        @"James Bond",
