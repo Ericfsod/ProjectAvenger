@@ -39,7 +39,7 @@
     self.questions = [Avengers.heroQuestions allKeys];
     [self nextQuestion];
     
-    self.ironMan.name = @"iron man";
+    self.ironMan.name = @"ironman";
     self.hawkeye.name = @"hawkeye";
     self.hulk.name = @"hulk";
 	self.captainAmerica.name = @"captainamerica";
@@ -61,9 +61,9 @@
 
 }
 
--(void)storeResult: (NSString *)resultSelected {
-    [self.resultData addObject:resultSelected];
-}
+//-(void)storeResult: (NSString *)resultSelected {
+//    [self.resultData addObject:resultSelected];
+//}
 
 - (IBAction)selected:(id)sender {
     NSString *userSelected;
@@ -104,7 +104,7 @@
         [self.thor.count addObject:userSelected];
 
     }
-    [self storeResult:userSelected];
+//    [self storeResult:userSelected];
     
     self.currentQuestion++;
     
@@ -142,6 +142,9 @@
     
     NSLog(@"%@",tem1.name);
     
+    [self resultPage:tem1];
+    
+    
 }
 
 - (HeroModel *)compare:(HeroModel *)a with:(HeroModel *)b {
@@ -152,7 +155,7 @@
     }
 }
 
-- (void)resultPage {
+- (void)resultPage:(HeroModel *)resultHero {
     
     [self.resultView setHidden:NO];
     
