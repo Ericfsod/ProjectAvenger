@@ -79,25 +79,25 @@
         
         userSelected= self.optionC.text;
         
-        [self.hulk addObject:userSelected];
+        [self.hulk.count addObject:userSelected];
 
     } else if (self.buttonD == sender){
         
         userSelected= self.optionD.text;
         
-        [self.hawkeye addObject:userSelected];
+        [self.hawkeye.count addObject:userSelected];
 
     } else if (self.buttonE == sender){
         
         userSelected= self.optionE.text;
         
-        [self.blackWidow addObject:userSelected];
+        [self.blackWidow.count addObject:userSelected];
 
     } else if (self.buttonF == sender){
         
         userSelected= self.optionF.text;
         
-        [self.thor addObject:userSelected];
+        [self.thor.count addObject:userSelected];
 
     }
     [self storeResult:userSelected];
