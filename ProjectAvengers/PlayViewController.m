@@ -24,6 +24,9 @@
 @property (nonatomic) HeroModel *hawkeye;
 @property (nonatomic) HeroModel *blackWidow;
 @property (nonatomic) HeroModel *captainAmerica;
+
+@property (weak,nonatomic) IBOutlet UIImageView *heroImageView;
+
 @property (weak, nonatomic) IBOutlet UIView *resultView;
 - (void)nextQuestion;
 
@@ -58,12 +61,12 @@
 //    NSDictionary *questionsDictionary = [Avengers heroQuestions];
 //    NSString *question = self.selectedQuestion;
 //    NSArray *options = [questionsDictionary objectForKey:question];
-
+    
+    
+    
 }
 
-//-(void)storeResult: (NSString *)resultSelected {
-//    [self.resultData addObject:resultSelected];
-//}
+
 
 - (IBAction)selected:(id)sender {
     NSString *userSelected;
@@ -104,13 +107,13 @@
         [self.thor.count addObject:userSelected];
 
     }
-//    [self storeResult:userSelected];
+
     
     self.currentQuestion++;
     
     if (self.currentQuestion == 7) {
         
-        [self resultPage];
+        [self selectedHero];
     } else {
         [self nextQuestion];
     }
@@ -159,8 +162,7 @@
     
     [self.resultView setHidden:NO];
     
-    
-    
+    [self.heroImageView setImage:[UIImage imageNamed:resultHero.name]];
 }
 
 
