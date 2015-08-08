@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D430E7E71B765D09004F1771 /* HeroModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D430E7E61B765D09004F1771 /* HeroModel.m */; };
 		D4BEB68B1B6E9937006AECCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB68A1B6E9937006AECCD /* main.m */; };
 		D4BEB68E1B6E9937006AECCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB68D1B6E9937006AECCD /* AppDelegate.m */; };
 		D4BEB6941B6E9937006AECCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4BEB6921B6E9937006AECCD /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D430E7E51B765D09004F1771 /* HeroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroModel.h; sourceTree = "<group>"; };
+		D430E7E61B765D09004F1771 /* HeroModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroModel.m; sourceTree = "<group>"; };
 		D4BEB6851B6E9937006AECCD /* ProjectAvengers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectAvengers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BEB6891B6E9937006AECCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BEB68A1B6E9937006AECCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				D4BEB6951B6E9937006AECCD /* Images.xcassets */,
 				D4BEB6971B6E9937006AECCD /* LaunchScreen.xib */,
 				D4BEB6881B6E9937006AECCD /* Supporting Files */,
+				D430E7E51B765D09004F1771 /* HeroModel.h */,
+				D430E7E61B765D09004F1771 /* HeroModel.m */,
 			);
 			path = ProjectAvengers;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				D4BEB68E1B6E9937006AECCD /* AppDelegate.m in Sources */,
 				D4D6FBDC1B708D6900EE78A5 /* PlayViewController.m in Sources */,
 				D4BEB68B1B6E9937006AECCD /* main.m in Sources */,
+				D430E7E71B765D09004F1771 /* HeroModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

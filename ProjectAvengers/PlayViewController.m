@@ -8,6 +8,7 @@
 
 #import "PlayViewController.h"
 #import "Avengers.h"
+#import "HeroModel.h"
 
 @interface PlayViewController ()
 
@@ -17,12 +18,12 @@
 @property (nonatomic) NSMutableArray *resultData;
 @property (nonatomic) NSInteger currentQuestion;
 @property (nonatomic) NSArray *resultCount;
-@property (nonatomic) NSMutableArray *ironMan;
-@property (nonatomic) NSMutableArray *thor;
-@property (nonatomic) NSMutableArray *hulk;
-@property (nonatomic) NSMutableArray *hawkeye;
-@property (nonatomic) NSMutableArray *blackWidow;
-@property (nonatomic) NSMutableArray *captainAmerica;
+@property (nonatomic) HeroModel *ironMan;
+@property (nonatomic) HeroModel *thor;
+@property (nonatomic) HeroModel *hulk;
+@property (nonatomic) HeroModel *hawkeye;
+@property (nonatomic) HeroModel *blackWidow;
+@property (nonatomic) HeroModel *captainAmerica;
 @property (weak, nonatomic) IBOutlet UIView *resultView;
 - (void)nextQuestion;
 
@@ -38,7 +39,10 @@
     self.questions = [Avengers.heroQuestions allKeys];
     [self nextQuestion];
     
+    self.ironMan.name = @"iron man";
+    self.hawkeye.name = @"hawkeye";
     
+    //
     
 }
 
@@ -63,13 +67,13 @@
         
         userSelected= self.optionA.text;
         
-        [self.ironMan addObject:userSelected];
+        [self.ironMan.count addObject:userSelected];
         
     } else if (self.buttonB == sender){
         
         userSelected= self.optionB.text;
         
-        [self.captainAmerica addObject:userSelected];
+        [self.captainAmerica.count addObject:userSelected];
 
     } else if (self.buttonC == sender){
         
@@ -122,6 +126,26 @@
     
     [self.hulk count];
     
+    HeroModel *tem1 = [self compare:self.ironMan with:self.hawkeye];
+    
+    tem1 = [self compare:tem1 with:self.thor];
+    
+    tem1 = [self compare:tem1 with:self.blackWidow];
+    
+    tem1 = [self compare:tem1 with:self.captainAmerica];
+    
+    tem1 = [self compare:tem1 with:self.hulk];
+    
+    NSLog(@"%@",tem1.name);
+    
+}
+
+- (HeroModel *)compare:(HeroModel *)a with:(HeroModel *)b {
+    if(a.count.count > b.count.count){
+        return a;
+    }else {
+        return b;
+    }
 }
 
 - (void)resultPage {
